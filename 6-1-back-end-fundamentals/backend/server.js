@@ -4,11 +4,12 @@ import cors from 'cors';
 
 
 // TODO 2: Create the Express app and store it in a variable named app
+const app = express();
 
 
 
 // TODO 3: Allow React to access the server
-
+app.use(cors());
 
 
 // TODO 5: Create the home route "/"
