@@ -361,6 +361,7 @@ export default function App() {
   // Syntax hint:
   // const [student, setStudent] = useState(____);
 
+
   // TODO 8:
   // Request student data from the server when the page loads
   // Syntax hint:
@@ -369,6 +370,15 @@ export default function App() {
   //   .then((data) => {
   //     setStudent(data);
   //   });
+
+  useEffect(() => {
+    fetch('http://localhost:3000/student')
+      .then((res) => res.json())
+      .then((data) => {
+        setStudent(data);
+      });
+  }, []);
+
 
   return (
     <main className="app-shell">
